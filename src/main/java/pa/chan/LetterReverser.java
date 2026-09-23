@@ -3,6 +3,10 @@ package pa.chan;
 public class LetterReverser {
 
     public String reverse(String text) {
+        if (text == null) {
+            throw new IllegalArgumentException("Исходная строка не должна быть null");
+        }
+
         char[] chars = text.toCharArray();
         int left = 0;
         int right = chars.length - 1;

@@ -6,8 +6,12 @@ public class Main {
 
         String text = "J@va the be$t!123";
 
-        String reverseText = letterReverser.reverse(text);
+        try {
+            String reverseText = letterReverser.reverse(text);
+            System.out.print(text + "\n" + reverseText);
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+        }
 
-        System.out.print(text + "\n" + reverseText);
     }
 }
